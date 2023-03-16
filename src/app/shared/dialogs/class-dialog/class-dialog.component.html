@@ -1,0 +1,30 @@
+<h1 mat-dialog-title>{{data.buttonType}} Class</h1>
+<div mat-dialog-content style="width:40vw;">
+    <form class="classForm" [formGroup]="classForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Class Title</mat-label>
+            <input autocomplete="off" matInput [formControlName]="'title'">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Class Description</mat-label>
+            <input autocomplete="off" matInput [formControlName]="'description'">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Coach Name</mat-label>
+            <input autocomplete="off" matInput [formControlName]="'coach_name'">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Timing</mat-label>
+            <input autocomplete="off" type="time" matInput [formControlName]="'timing'">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Price</mat-label>
+            <input autocomplete="off" type="number" matInput [formControlName]="'price'">
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions style="display:flex;justify-content:center;padding:1rem">
+    <button mat-flat-button color="primary" (click)="data.buttonType==='Add'?onAddClass():onEditClass()"
+        [disabled]="classForm.invalid">Save</button>
+    <button mat-flat-button color="warn" mat-dialog-close>Close</button>
+</div>

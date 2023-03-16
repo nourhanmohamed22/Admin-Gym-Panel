@@ -1,0 +1,12 @@
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.title {
+    font-weight: bold;
+    font-size: x-large;
+}

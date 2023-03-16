@@ -1,0 +1,51 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover,
+a:active {
+    color: lightgray;
+}
+
+.navigation-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+mat-toolbar {
+    border-radius: 3px;
+}
+
+.logo {
+    max-width: 9%;
+    margin-left: 9%;
+}
+
+@media(max-width: 959px) {
+    mat-toolbar {
+        border-radius: 0px;
+    }
+
+    .logo {
+        max-width: 25%;
+    }
+}
+
+.profileContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.profile {
+    max-width: 30%;
+    border-radius: 50%;
+}
+
+.adminName {
+    margin-top: 5px;
+    margin-left: 3px;
+    font-weight: bold;
+}

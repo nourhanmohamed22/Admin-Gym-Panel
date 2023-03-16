@@ -1,0 +1,7 @@
+.classForm {
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+    overflow-y: auto;
+    padding: 1rem;
+}

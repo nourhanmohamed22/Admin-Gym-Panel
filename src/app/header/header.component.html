@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+    <div>
+        <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <!-- Logo -->
+    <div class="pt-6 px-8" style="display: flex;justify-content: center;">
+        <img class="logo" src="assets/images/gymlogo.png">
+    </div>
+
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+            <li>
+                <div class="profileContainer">
+                    <img class="profile" src="assets/images/male-09.jpg" alt="Card cover image">
+                    <span class="adminName">Welcome Admin</span>
+
+                </div>
+                <!-- <a routerLink="/owner">Welcome Admin</a> -->
+            </li>
+            <!-- <li>
+                <a routerLink="/account">Account Actions</a>
+            </li> -->
+        </ul>
+    </div>
+</mat-toolbar>
