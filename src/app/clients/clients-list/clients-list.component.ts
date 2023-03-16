@@ -34,7 +34,7 @@ export class ClientsListComponent implements AfterViewInit, OnInit {
     this.dataSource.paginator = this.paginator;
   }
   getClientsList(): void {
-    this.clientsService.listclients().subscribe(data => {
+    this.clientsService.listclients().subscribe((data: any[]) => {
       this.dataSource.data = data;
     });
   }
@@ -50,7 +50,7 @@ export class ClientsListComponent implements AfterViewInit, OnInit {
     const dialogRef = this._matDialog.open(ClientDialogComponent, dialogConfig);
     dialogConfig.width = '40vw';
     dialogRef.afterClosed()
-      .subscribe((result) => {
+      .subscribe((_result: any) => {
         console.log('Client dialog was closed!');
       });
   }
@@ -60,6 +60,8 @@ export class ClientsListComponent implements AfterViewInit, OnInit {
       this.notify(`client ${client.full_name} has been deleted successfully!`, 'primary');
     });
   }
+
+
 
   private notify(msg: string, msgColor: string): void {
     this._snackBar.open(msg, '', {

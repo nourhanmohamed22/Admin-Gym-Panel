@@ -15,6 +15,8 @@ import { ClassesListComponent } from './classes/classes-list/classes-list.compon
 import { ClientDialogComponent } from './shared/dialogs/client-dialog/client-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ClassDialogComponent } from './shared/dialogs/class-dialog/class-dialog.component';
+import { ClientDetailsComponent } from './clients/client-details/client-details.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { ClassDialogComponent } from './shared/dialogs/class-dialog/class-dialog
     ClientsListComponent,
     ClassesListComponent,
     ClientDialogComponent,
-    ClassDialogComponent
+    ClassDialogComponent,
+    ClientDetailsComponent,
   ],
   imports: [
     BrowserModule,

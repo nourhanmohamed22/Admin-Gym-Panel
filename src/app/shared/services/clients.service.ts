@@ -23,6 +23,10 @@ export class ClientsService {
     return this.http.put<any>(`${this.clientUrl}/clients/${id}`, body);
   }
 
+  getclientById(id: number): Observable<any> {
+    return this.http.get<any>(`${this.clientUrl}/clients/${id}`);
+  }
+
   deleteClient(id: number): Observable<any> {
     return this.http.delete<any>(`${this.clientUrl}/clients/${id}`);
   }
